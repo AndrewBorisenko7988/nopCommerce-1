@@ -190,6 +190,8 @@ namespace Nop.Web.Controllers
 
             //model
             var model = _productModelFactory.PrepareProductDetailsModel(product, updatecartitem, false);
+            //author
+            model.Author = product.Author;
             //template
             var productTemplateViewPath = _productModelFactory.PrepareProductTemplateViewPath(product);
 

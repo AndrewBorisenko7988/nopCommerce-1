@@ -824,6 +824,9 @@ namespace Nop.Web.Areas.Admin.Controllers
                 model.SeName = _urlRecordService.ValidateSeName(product, model.SeName, product.Name, true);
                 _urlRecordService.SaveSlug(product, model.SeName, 0);
 
+                //author
+                model.Author = product.Author;
+
                 //locales
                 UpdateLocales(product, model);
 
@@ -957,6 +960,9 @@ namespace Nop.Web.Areas.Admin.Controllers
                 //search engine name
                 model.SeName = _urlRecordService.ValidateSeName(product, model.SeName, product.Name, true);
                 _urlRecordService.SaveSlug(product, model.SeName, 0);
+
+                //author
+                model.Author = product.Author;
 
                 //locales
                 UpdateLocales(product, model);
